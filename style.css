@@ -71,3 +71,78 @@ body {
 	font-size: var(--font-sm);
 	font-weight: var(--font-regular);
 }
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+section {
+	max-width: 500px;
+}
+
+#hero {
+	margin-top: 130px;
+	padding: 70px 0;
+	max-width: 1200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+}
+
+.hero-info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 10px;
+	font-size: var(--font-sm);
+	width: 90%;
+	color: var(--text-white);
+}
+
+.hero-card h1 {
+	font-size: var(--font-xl);
+	font-weight: var(--font-black);
+	color: var(--text-white);
+}
+
+.hero-info p {
+	font-size: var(--font-sm);
+	width: 80%;
+	color: var(--text-white);
+}
+
+.hero-card {
+	background: var(--nav-bg);
+	padding: 20px;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	justify-content: center;
+	width: 300px;
+}
+
+.btn {
+	font-size: var(--font-sm);
+	font-weight: var(--font-semibold);
+	color: var(--text-white);
+	background-color: var(--nav-bg);
+	padding: 8px 20px;
+	border-radius: 8px;
+}
+
+.discover-info {
+	padding: 20px 0px;
+	max-width: 1200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	gap: 10px;
+}
