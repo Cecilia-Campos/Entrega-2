@@ -10,9 +10,11 @@ body {
 :root {
 	/* bg-colors */
 	--background: #e4b0c2;
+	--background-2: #d66d75;
 	--nav-bg: #1f363d;
 	--primary: #f9fafb;
 	--secondary: #02050e;
+	--btn-bg: #1f363d;
 
 	/* Text colors */
 	--text-gray: #adb8c7;
@@ -27,6 +29,7 @@ body {
 	--font-black: 800;
 
 	--font-sm: 14px;
+	--font-m: 28px;
 	--font-xl: 48px;
 }
 
@@ -36,7 +39,7 @@ body {
 	box-sizing: border-box;
 	list-style-type: none;
 	text-decoration: none;
-	font-family: var(--font-montserrat);
+	font-family: var(--font-montserrat), sans-serif;
 }
 
 .header {
@@ -47,7 +50,11 @@ body {
 	padding: 0 40px;
 	position: fixed;
 	width: 100%;
-	height: 130px;
+	height: 85px;
+}
+
+.logo {
+	height: 80%;
 }
 
 .navbar,
@@ -55,21 +62,29 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: var(--nav-bg);
 }
 
 .navbar-list {
-	gap: 5rem;
+	gap: 40px;
 }
 
 .navbar {
-	gap: 3rem;
+	gap: 5rem;
 }
 
 .navbar-list a {
 	color: var(--text-white);
 	font-size: var(--font-sm);
 	font-weight: var(--font-regular);
+}
+
+.navbar-list li:first-child > a {
+	font-weight: var(--font-semibold);
+}
+
+.cart-icon {
+	height: 20px;
+	cursor: pointer;
 }
 
 main {
@@ -80,13 +95,10 @@ main {
 	width: 100%;
 }
 
-section {
-	max-width: 500px;
-}
-
+/* HERO */
 #hero {
-	margin-top: 130px;
-	padding: 70px 0;
+	margin-top: 85px;
+	padding: 50px 30px;
 	max-width: 1200px;
 	display: flex;
 	justify-content: center;
@@ -98,51 +110,115 @@ section {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	gap: 10px;
+	gap: 20px;
 	font-size: var(--font-sm);
-	width: 90%;
+	width: 50%;
 	color: var(--text-white);
 }
 
-.hero-card h1 {
+.hero-info h1 {
 	font-size: var(--font-xl);
 	font-weight: var(--font-black);
+	width: 80%;
+	min-width: 500px;
 	color: var(--text-white);
 }
 
 .hero-info p {
 	font-size: var(--font-sm);
-	width: 80%;
+	width: 90%;
 	color: var(--text-white);
-}
-
-.hero-card {
-	background: var(--nav-bg);
-	padding: 20px;
-	border-radius: 15px;
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	justify-content: center;
-	width: 300px;
 }
 
 .btn {
 	font-size: var(--font-sm);
 	font-weight: var(--font-semibold);
 	color: var(--text-white);
-	background-color: var(--nav-bg);
+	background-color: var(--btn-bg);
 	padding: 8px 20px;
 	border-radius: 8px;
 }
 
+.hero-card {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	justify-content: center;
+	width: 600px;
+}
+
 .discover-info {
 	padding: 20px 0px;
-	max-width: 1200px;
+	max-width: 500px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
 	justify-content: center;
 	gap: 10px;
+}
+
+.btn-season {
+	font-size: var(--font-sm);
+	font-weight: var(--font-semibold);
+	color: var(--text-white);
+	background-color: var(--btn-bg);
+	padding: 8px 20px;
+	border-radius: 8px;
+}
+
+/*  ================== INFO ==================*/
+#info {
+	padding: 30px 0;
+	max-width: 1200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 80px;
+}
+
+.info-cards-container {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.info-card {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: baseline;
+	gap: 10px;
+	padding: 30px 30px;
+	max-width: 350px;
+}
+
+.info-card img {
+	width: 300px;
+}
+
+.info-card-data {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	width: 300px;
+}
+
+.info-card-product-name {
+	font-weight: var(--font-semibold);
+	font-size: var(--font-sd);
+	color: var(--text-white);
+	cursor: pointer;
+}
+
+.info-card p {
+	font-size: var(--font-sm);
+	font-weight: var(--font-light);
+	color: var(--text-white);
 }
